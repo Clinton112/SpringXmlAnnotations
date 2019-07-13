@@ -40,11 +40,10 @@ public class Config
         return actor;
     }
 
-    @Bean({"movieA","movieB"})
-    @Scope("prototype")
+    @Bean
     public Movie movie()
     {
-        Movie movie=new Movie(actor());
+        Movie movie=new Movie(actorKatrina());
         return movie;
     }
 }
