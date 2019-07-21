@@ -1,7 +1,8 @@
 package com.stackroute;
 
+import com.stackroute.config.Config;
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.Movie;
-import com.stackroute.BeanLifecycleDemoBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
