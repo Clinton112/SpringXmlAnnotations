@@ -1,5 +1,6 @@
 package com.stackroute;
 
+import com.stackroute.config.Config;
 import com.stackroute.domain.Movie;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
