@@ -1,4 +1,4 @@
-package com.stackroute;
+package com.stackroute.config;
 
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
