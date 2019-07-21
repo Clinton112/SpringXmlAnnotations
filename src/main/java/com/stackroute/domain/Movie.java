@@ -20,9 +20,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
     public Movie() {
     }
 
-    public void setActor(Actor actor) {
-        this.actor = actor;
-    }
+
 
     @Override
     public String toString() {

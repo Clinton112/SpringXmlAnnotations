@@ -1,19 +1,20 @@
 package com.stackroute;
 
+import com.stackroute.config.Config;
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.Movie;
-import com.stackroute.BeanLifecycleDemoBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext annotationConfigApplicationContext=new AnnotationConfigApplicationContext();
-        annotationConfigApplicationContext.register(Config.class);
-        annotationConfigApplicationContext.refresh();
-        annotationConfigApplicationContext.scan("com.stackroute");
-        Movie movie1=annotationConfigApplicationContext.getBean("movie",Movie.class);
-        System.out.println(movie1);
-        BeanLifecycleDemoBean beanLifecycleDemoBean=annotationConfigApplicationContext.getBean(BeanLifecycleDemoBean.class);
-        annotationConfigApplicationContext.registerShutdownHook();
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+
+        Movie movie = context.getBean("movie", Movie.class);
+        System.out.println(movie);
+
+        BeanLifecycleDemoBean beanLifecycleDemoBean = context.getBean(BeanLifecycleDemoBean.class);
+        System.out.println(beanLifecycleDemoBean);
+        context.registerShutdownHook();
 
 
     }
